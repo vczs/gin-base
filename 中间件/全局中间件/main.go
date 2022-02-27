@@ -13,7 +13,7 @@ func main() {
 	//以下代码变量r定义的请求 在执行其处理器之前都要先执行注册的全局中间件handler1和handler2
 	//执行完注册的全局中间件后 才能执行自己的处理器函数
 	r.GET("/", func(c *gin.Context) {
-		fmt.Println("执行了/c的函数")
+		fmt.Println("执行了/的函数")
 		c.JSON(http.StatusOK, gin.H{"success": "hello golang!"})
 	})
 	r.Run(":9011")
